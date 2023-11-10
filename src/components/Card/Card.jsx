@@ -43,8 +43,8 @@ function CompactCard({ param, setExpanded }) {
       </div>
       <div className="detail">
         <Png />
-        <span>${param.value}</span>
-        <span>Last 24 hours</span>
+        <span>{param.value}</span>
+        <span>Últimas 24 horas</span>
       </div>
     </motion.div>
   );
@@ -89,16 +89,21 @@ function ExpandedCard({ param, setExpanded }) {
         show: true,
       },
       xaxis: {
-        type: "datetime",
+        type: "categories",
         categories: [
-          "2018-09-19T00:00:00.000Z",
-          "2018-09-19T01:30:00.000Z",
-          "2018-09-19T02:30:00.000Z",
-          "2018-09-19T03:30:00.000Z",
-          "2018-09-19T04:30:00.000Z",
-          "2018-09-19T05:30:00.000Z",
-          "2018-09-19T06:30:00.000Z",
+          "10/01",
+          "11/01",
+          "12/01",
+          "13/01",
+          "14/01",
+          "15/01",
+          "16/01",
         ],
+        labels: {
+          style: {
+            colors: "white", // set the color of X-axis labels
+          },
+        },
       },
     },
   };
@@ -115,11 +120,11 @@ function ExpandedCard({ param, setExpanded }) {
       <div style={{ alignSelf: "flex-end", cursor: "pointer", color: "white" }}>
         <UilTimes onClick={setExpanded} />
       </div>
-        <span>{param.title}</span>
+      <span>{param.title}</span>
       <div className="chartContainer">
         <Chart options={data.options} series={param.series} type="area" />
       </div>
-      <span>Last 24 hours</span>
+      <span>Últimas 24 horas</span>
     </motion.div>
   );
 }

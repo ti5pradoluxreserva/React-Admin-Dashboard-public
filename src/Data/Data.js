@@ -3,19 +3,16 @@ import {
   UilEstate,
   UilClipboardAlt,
   UilUsersAlt,
-  UilPackage,
   UilChart,
-  UilSignOutAlt,
 } from "@iconscout/react-unicons";
 
 // Analytics Cards imports
-import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
-import { keyboard } from "@testing-library/user-event/dist/keyboard";
+import { UilCheckSquare, UilUtensils , UilBan  } from "@iconscout/react-unicons";
 
 // Recent Card Imports
-import img1 from "../imgs/img1.png";
-import img2 from "../imgs/img2.png";
-import img3 from "../imgs/img3.png";
+import img1 from "../imgs/img1.jpg";
+import img2 from "../imgs/img2.jpg";
+import img3 from "../imgs/img3.jpg";
 
 // Sidebar Data
 export const SidebarData = [
@@ -25,69 +22,65 @@ export const SidebarData = [
   },
   {
     icon: UilClipboardAlt,
-    heading: "Orders",
+    heading: "Relatórios",
   },
   {
     icon: UilUsersAlt,
-    heading: "Customers",
-  },
-  {
-    icon: UilPackage,
-    heading: 'Products'
+    heading: "Funcionários",
   },
   {
     icon: UilChart,
-    heading: 'Analytics'
+    heading: 'Gráficos'
   },
 ];
 
 // Analytics Cards Data
 export const cardsData = [
   {
-    title: "Sales",
+    title: "Pontos Registrados",
     color: {
-      backGround: "linear-gradient(180deg, #bb67ff 0%, #c484f3 100%)",
-      boxShadow: "0px 10px 20px 0px #e0c6f5",
+      backGround: "linear-gradient(180deg, #063970 0%, #315d7f 100%)",
+      boxShadow: "0px 10px 20px 0px #ffffff",
     },
-    barValue: 70,
-    value: "25,970",
-    png: UilUsdSquare,
+    barValue: 90,
+    value: "486",
+    png: UilCheckSquare ,
     series: [
       {
-        name: "Sales",
+        name: "Pontos Registrados",
         data: [31, 40, 28, 51, 42, 109, 100],
       },
     ],
   },
   {
-    title: "Revenue",
+    title: "Faltas",
     color: {
-      backGround: "linear-gradient(180deg, #FF919D 0%, #FC929D 100%)",
-      boxShadow: "0px 10px 20px 0px #FDC0C7",
+      backGround: "linear-gradient(180deg, #290911 0%, #4e1d29 100%)",
+      boxShadow: "0px 10px 20px 0px #Bd7788",
     },
     barValue: 80,
-    value: "14,270",
-    png: UilMoneyWithdrawal,
+    value: "14",
+    png: UilBan,
     series: [
       {
-        name: "Revenue",
+        name: "Faltas",
         data: [10, 100, 50, 70, 80, 30, 40],
       },
     ],
   },
   {
-    title: "Expenses",
+    title: "Intervalos",
     color: {
       backGround:
-        "linear-gradient(rgb(248, 212, 154) -146.42%, rgb(255 202 113) -46.42%)",
+        "linear-gradient(180deg, #F7cd1c 0%, #C9b148 100%)",
       boxShadow: "0px 10px 20px 0px #F9D59B",
     },
     barValue: 60,
     value: "4,270",
-    png: UilClipboardAlt,
+    png: UilUtensils ,
     series: [
       {
-        name: "Expenses",
+        name: "Intervalos",
         data: [10, 25, 15, 30, 12, 15, 20],
       },
     ],
@@ -98,20 +91,20 @@ export const cardsData = [
 export const UpdatesData = [
   {
     img: img1,
-    name: "Andrew Thomas",
-    noti: "has ordered Apple smart watch 2500mh battery.",
-    time: "25 seconds ago",
+    name: "Patrick Martins",
+    noti: "Registrou a entrada.",
+    time: "25 minutos atrás",
   },
   {
     img: img2,
-    name: "James Bond",
-    noti: "has received Samsung gadget for charging battery.",
-    time: "30 minutes ago",
+    name: "Vanderson Godoy",
+    noti: "Registrou a entrada.",
+    time: "30 minutos atrás",
   },
   {
     img: img3,
-    name: "Iron Man",
-    noti: "has ordered Apple smart watch, samsung Gear 2500mh battery.",
-    time: "2 hours ago",
+    name: "Rogério Siqueira",
+    noti: "Registrou a saída.",
+    time: "2 horas atrás",
   },
 ];
