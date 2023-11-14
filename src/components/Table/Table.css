@@ -23,6 +23,26 @@ th {
   color: #00b5ff !important;
 }
 
+.TableContainer {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.TableContainer thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.TableContainer tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.TableContainer th,
+.TableContainer td {
+  padding: 10px;
+}
+
 @media screen and (max-width: 1200px) {
   .Table {
     width: 170%;
