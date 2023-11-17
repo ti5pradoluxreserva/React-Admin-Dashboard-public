@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 // Sidebar imports
 import {
   UilEstate,
@@ -7,7 +8,7 @@ import {
 } from "@iconscout/react-unicons";
 
 // Analytics Cards imports
-import { UilCheckSquare, UilUtensils , UilBan  } from "@iconscout/react-unicons";
+import { UilCheckSquare, UilUtensils , UilBan, UilExchange  } from "@iconscout/react-unicons";
 
 // Recent Card Imports
 import img1 from "../imgs/img1.jpg";
@@ -32,12 +33,16 @@ export const SidebarData = [
     icon: UilChart,
     heading: 'Gráficos'
   },
+  {
+    icon: UilExchange,
+    heading: 'Trocar Local',
+  }
 ];
 
 // Analytics Cards Data
 export const cardsData = [
   {
-    title: "Pontos Registrados",
+    title: "Pontos",
     color: {
       backGround: "linear-gradient(180deg, #063970 0%, #315d7f 100%)",
       boxShadow: "0px 10px 20px 0px #ffffff",
